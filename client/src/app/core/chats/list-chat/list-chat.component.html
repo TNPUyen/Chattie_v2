@@ -1,0 +1,30 @@
+    <div class="header mt-2">
+      <h1>Chats</h1>
+      <button class="btn plus_btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Create conversation"><i
+          class="bi bi-plus"></i></button>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <!-- <a class="nav-link" (click)='choose("direct")' routerLinkActive="active"> -->
+            <p #direct>DIRECT</p>
+          <!-- </a> -->
+          <div class="new"></div>
+        </li>
+        <li>
+          <!-- <a class="nav-link" (click)='choose("groups")' routerLinkActive="active"> -->
+            <p #group>GROUPS</p>
+          <!-- </a> -->
+          <div class="new"></div>
+        </li>
+        <li>
+          <!-- <a class="nav-link" (click)='choose("public")' routerLinkActive="active"> -->
+            <p #public>PUBLIC</p>
+          <!-- </a> -->
+          <div class="new"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-2">
+      <input type="text" placeholder="Search" class="search">
+    </div>

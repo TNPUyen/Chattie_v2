@@ -1,0 +1,22 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sidebar-wrapper{
+    height: 100%;
+}
+
+.content-wrapper{
+    background-color: pink;
+    height: 100%;
+}

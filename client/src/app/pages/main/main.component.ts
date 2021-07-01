@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SetupService } from 'src/app/services/setup/setup.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private setUpService: SetupService) { }
 
   ngOnInit(): void {
+    this.setUpService.popover();
+    this.setUpService.tooltip();
   }
 
 }

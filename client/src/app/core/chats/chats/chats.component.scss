@@ -1,0 +1,54 @@
+$black: #1d1919;
+$purple: #530CE2;
+$lighter-purple: #A36490;
+$news-red: #CD041E;
+// -------- HEADER ---------
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus_btn{
+    background-image: linear-gradient(to top right, $purple, $lighter-purple);
+    border-radius: 50%;
+    color: white;
+    height: 1.9rem;
+    width: 1.9rem;
+    padding: 0;
+    i{
+        font-size: 20px;
+    }
+}
+
+// ------ CHOOSE LIST -------
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+
+    li{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.new{
+    width: 0.313rem;
+    height: 0.313rem;
+    background-color: $news-red;
+    border-radius: 50%;
+    margin-left: 0.25rem;
+}

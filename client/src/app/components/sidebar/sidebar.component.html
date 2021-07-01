@@ -1,1 +1,27 @@
-<p>sidebar works!</p>
+<div class="sidebar-content">
+    <!-- <app-side-nav></app-side-nav> -->
+    <div>
+        <nav class="nav">
+            <ul class="nav-content my-1">
+                <li data-bs-toggle="tooltip" data-bs-placement="bottom" #chat title="Chats" (click)="choose(chat)" >
+                    <i class="bi bi-chat-fill icon" [style.background-image]="this.selectedIndex == chat || this.selectedIndex == null?'linear-gradient(#B435F4, #7142E8)':'linear-gradient(#A5ACB5, #A5ACB5)'"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Calls" #call (click)="choose(call)">
+                    <i class="bi bi-telephone-fill icon" [style.background-image]="this.selectedIndex == call?'linear-gradient(#B435F4, #7142E8)':'linear-gradient(#A5ACB5, #A5ACB5)'"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Requests" #request (click)="choose(request)">
+                    <i class="bi bi-envelope icon" [style.background-image]="this.selectedIndex == request?'linear-gradient(#B435F4, #7142E8)':'linear-gradient(#A5ACB5, #A5ACB5)'"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Friends" #friend (click)="choose(friend)">
+                    <i class="bi bi-people-fill icon" [style.background-image]="this.selectedIndex == friend?'linear-gradient(#B435F4, #7142E8)':'linear-gradient(#A5ACB5, #A5ACB5)'"></i>
+                </li>
+                <li><img src="../../../assets/ava.jpg" alt="" class="ava"></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mx-4">
+        <app-list-chat *ngIf="this.selectedIndex == chat || this.selectedIndex == null"></app-list-chat>
+        <app-request *ngIf="this.selectedIndex == request"></app-request>
+        <app-friendlist *ngIf="this.selectedIndex == friend"></app-friendlist>
+    </div>
+</div>
